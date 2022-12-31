@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>HomePage</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+}
+
+.section_1 {
+    position: relative;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('./media/bg.png');
+}
+
+
+.section_3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.section_3_partion_1 {
+    position: relative;
+}
+
+.partition_1_head {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 60px;
+    width: 150px;
+    transform: translateX(50px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    transform: translateX(-40%);
+    align-items: center;
+    border-bottom: 2px solid rgb(219, 219, 219);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #333;
+    transition: all .3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+
+.welcome_message {
+    font-size: 10rem;
+    color: transparent;
+    transform: translate(5%, 40%);
+    font-family: sans-serif;
+    -webkit-text-stroke: 2px #fff;
+    cursor: pointer;
+    transition: all .4s ease;
+    display: inline-block;
+}
+
+.welcome_message:hover {
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-text-stroke: 0;
+}
+
+.section_3_partion_2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carts_container {
+    height: 80%;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.cart {
+    border: 1px solid #fff;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all .5s ease;
+    border: 1px solid lightgray;
+}
+
+.cart_image {
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cart_image_1 {
+    background-image: url('https://tse2.mm.bing.net/th?id=OIP.olG1zReeIEBGu8bvs1xdFAHaFj&pid=Api&P=0');
+}
+
+.cart_image_2 {
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.fmOL1DAVn0qk97s4f7ZNHAHaEK&pid=Api&P=0');
+}
+
+.cart_image_3 {
+    background-image: url('https://tse2.mm.bing.net/th?id=OIP.39WaFpw29NRFDqw0OFOpJQAAAA&pid=Api&P=0');
+}
+
+.cart:hover {
+    transform: translateY(-15px);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+.cart_image p.course_name {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+}
+.section_3_partion_2 .carts_container .cart .cart_image .price {
+  /* Positionne le prix en bas de l'image de la carte */
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  /* Ajuste la taille et le style de la police de caractères */
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+}
+
+.transparent-container {
+        position: absolute;
+        border-radius: 50%;
+      
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 1em;
+        width: 1100px;
+        bottom: 80%;
+
+  height: 300px;
+  
+ 
+  margin: 0 auto;
+ 
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+      }
+
+
+
+
+  .carts_container {
+  position: relative;  /* Indique que la position du conteneur est relative à sa position initiale */
+  top: 200px; 
+   /* Déplace le conteneur de 50 pixels vers le bas par rapport à sa position initiale */
+
+}
+.section_3_partion_2 {
+  margin-top: 50px;
+  bottom: 50%;
+  
+  
+}
+.cart_image {
+  margin-bottom: 5px;
+}
+
+
+.section_3_partion_1 {
+  position: relative;
+  height: 100%;
+
+}
+button {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 60px;
+  width: 210px;
+  opacity: 1;
+  background-color: transparent;
+
+  border-width: 10px solid white ;
+}
+
+button span {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+
+button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+
+</style>
+
+<body>
+  <header>
+    <div class="section_1">
+        
+    </div>
+    <div class="section_3">
+      <div class="section_3_partion_1">
+        <div class="partition_1_head">
+          <div class="logo_container">
+            <div class="logo">
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li><a target="_blank" href="file:///C:/Users/DIAE/Desktop/Coding/project/mysite.html" >Home</a></li>
+              <li><a target="_blank" href="file:///C:/Users/DIAE/Desktop/Coding/project/index.html">Courses</a></li>
+              <li><a  target="_blank" href="https://github.com/Luzithegoat">Apropos</a></li>
+            </ul>
+          </nav>
+        </div>
+          
+      
+      
+      <h1 class="welcome_message">COURSES</h1>
+
+      
+        
+      </div>
+      <div class="section_3_partion_2">
+        <div class="carts_container">
+          <div class="cart cart_1">
+            <div class="cart_image cart_image_1">
+            </div>
+            <p >$<span id="price1"></span></p>
+            <p>HTML</p>
+          </div>
+          <div class="cart cart_1">
+            <div class="cart_image cart_image_2">
+            </div>
+            <p >$<span id="price2"></span></p>
+            <p >CSS</p>
+          </div>
+          <div class="cart cart_1">
+            <div class="cart_image cart_image_3">
+            </div>
+            <p >$<span id="price3"></span></p>
+            <p >JavaScript</p>
+            </div>
+          </div>
+      <button id="crslist"> <span> Courses list </span></button>
+       
+        </div>
+
+      </div>
+
+
+    </div>
+  </header>
+  <script>
+    var images = [
+"https://tse4.mm.bing.net/th?id=OIP.WYtdRUq3o8rmeNmg-6nRrwHaEK&pid=Api&P=0",
+"https://tse3.explicit.bing.net/th?id=OIP.BvLHpewdzq7MNXY5TfcRrgHaFj&pid=Api&P=0",
+"https://tse2.mm.bing.net/th?id=OIP.K9riPTthxsIiZN-LgYxz1gHaE8&pid=Api&P=0",
+"https://tse1.mm.bing.net/th?id=OIP.xU6dG1eOOXH6Y6Q-CIvKWAHaE8&pid=Api&P=0"
+];
+function generateRandomPricesAndImages() {
+// Sélectionne une image aléatoire du tableau d'images
+var image1 = images[Math.floor(Math.random() * images.length)];
+var image2 = images[Math.floor(Math.random() * images.length)];
+var image3 = images[Math.floor(Math.random() * images.length)];
+
+// Génère des prix aléatoires entre 50 et 100 pour chaque carte
+document.getElementById('price1').innerHTML = Math.floor(Math.random() * (100 - 50 + 1) + 50);
+document.getElementById('price2').innerHTML = Math.floor(Math.random() * (100 - 50 + 1) + 50);
+document.getElementById('price3').innerHTML = Math.floor(Math.random() * (100 - 50 + 1) + 50);
+
+// Modifie l'image de fond de chaque carte en utilisant les URL sélectionnées aléatoirement
+document.querySelector('.cart_image_1').style.backgroundImage = `url(${image1})`;
+  document.querySelector('.cart_image_2').style.backgroundImage = `url(${image2})`;
+  document.querySelector('.cart_image_3').style.backgroundImage = `url(${image3})`;
+}
+
+window.onload = function() {
+  generateRandomPricesAndImages();
+}
+document.querySelector('.welcome_message').addEventListener('click', function() {
+generateRandomPricesAndImages();
+});
+window.addEventListener('beforeunload', function() {
+generateRandomPricesAndImages();
+});
+document.getElementById('crslist').addEventListener('click',function(){
+  window.location.href="file:///C:/Users/DIAE/Desktop/Coding/project/index.html"
+})
+
+    
+  </script>
+</body>
+
+</html>
